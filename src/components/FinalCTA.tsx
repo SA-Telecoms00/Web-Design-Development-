@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, MessageCircle, Calendar } from "lucide-react";
 
 export default function FinalCTA() {
   const ref = useRef(null);
@@ -85,7 +85,7 @@ export default function FinalCTA() {
             className="flex flex-wrap justify-center gap-4"
           >
             <motion.a
-              href="#"
+              href="#contact"
               whileHover={{
                 scale: 1.05,
                 boxShadow: "0 0 40px rgba(0,240,255,0.4)",
@@ -103,15 +103,33 @@ export default function FinalCTA() {
             </motion.a>
 
             <motion.a
-              href="#"
+              href="https://wa.me/27XXXXXXXXX?text=Hi%20SA%20Telecoms!%20I'm%20interested%20in%20your%20website%20design%20%26%20development%20services."
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 20px rgba(37,211,102,0.3)",
+              }}
+              whileTap={{ scale: 0.97 }}
+              className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl glass text-white font-bold text-lg hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-green-400/50"
+            >
+              <MessageCircle size={20} />
+              WhatsApp Us
+            </motion.a>
+
+            <motion.a
+              href="https://calendly.com/sa-telecoms/consultation"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{
                 scale: 1.05,
                 boxShadow: "0 0 20px rgba(168,85,247,0.3)",
               }}
               whileTap={{ scale: 0.97 }}
-              className="px-10 py-5 rounded-2xl glass text-white font-bold text-lg hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-neon-purple/50"
+              className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl glass text-white font-bold text-lg hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-neon-purple/50"
             >
-              Schedule a Call
+              <Calendar size={20} />
+              Book a Call
             </motion.a>
           </motion.div>
         </motion.div>

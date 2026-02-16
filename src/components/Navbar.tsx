@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Portfolio", href: "#portfolio" },
   { label: "Process", href: "#process" },
   { label: "Why Us", href: "#why-us" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -59,6 +60,9 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-white/80 hover:text-neon-cyan transition-colors"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -71,6 +75,7 @@ export default function Navbar() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
+              id="mobile-menu"
               className="md:hidden mt-2 glass-strong rounded-2xl overflow-hidden"
             >
               <div className="p-4 flex flex-col gap-3">
